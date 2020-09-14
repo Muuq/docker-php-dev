@@ -1,6 +1,4 @@
-FROM mitakeck/php:v7.4
-
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+FROM mitakeck/php:v7.0
 
 RUN apt-get update && apt-get install -y \
   git \
