@@ -1,6 +1,6 @@
 FROM mitakeck/php:v7.4
 
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug && echo '  xdebug.mode=coverage' >> /usr/local/etc/php/php.ini
 
 RUN apt-get update && apt-get install -y \
   git \
